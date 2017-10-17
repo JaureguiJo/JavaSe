@@ -1,3 +1,5 @@
+package com.prueba;
+import java.util.Scanner;
 
 public class HelloWorld {
 
@@ -44,6 +46,60 @@ public class HelloWorld {
 		else if(!bool1 == bool2){
 			System.out.println("Ni modo");
 		}
+		
+		
+		String option = "Chana";
+//		Scanner leer = new Scanner(System.in);
+//		option = leer.nextLine();
+		
+		switch(option){
+		case "Chana":
+			System.out.println("Chana");
+			break;
+		case "Conchita":
+			System.out.println("Conchita");
+			break;
+			default: System.out.println("Ninguno");
+		}
+		
+		String comp = "hola";
+		if(comp.compareTo("hola") == 0){
+			System.out.println("Hola");
+		}
+		
+		int arr[] = {1,2,3,4,2,1};
+		
+		for(int i: arr){
+			System.out.println(i);
+		}
+		System.out.println();
+		int contador = 0;
+		while(contador < meses.length){
+			System.out.println((contador + 1)+" : "+meses[contador]);
+			contador++;
+		}
+		System.out.println("\n");
+		CuentaPalabras obj = new CuentaPalabras(7);
+		obj.cuentaLetras();
+		System.out.println("\n");
+		obj.Ordenar();
+		
+		System.out.println("\n");
+		
+		//NullPointer, NumberFormat, OutOfBounds, IO,
+		
+		try{
+			while(contador < 14){
+				System.out.println((contador + 1)+" : "+meses[contador]);
+				contador++;
+			}
+		}catch(Exception ex){
+			System.out.println(ex);
+		}finally{
+			System.out.println("Finally");
+		}
+		
 	}
+	
 
 }
